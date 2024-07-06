@@ -1,2 +1,8 @@
 #!/bin/bash
-echo "Playwright"
+if [ -f "$BUILD_DIR/package.json" ]; then
+  echo "Node.js app detected"
+  exit 0
+else
+  echo "No Node.js app detected"
+  exit 1
+fi
