@@ -1,8 +1,8 @@
 #!/bin/bash
+# Detect if this buildpack should be used
 if [ -f "$BUILD_DIR/package.json" ]; then
-  echo "Node.js app detected"
+  echo "Playwright Buildpack"
   exit 0
 else
-  echo "No Node.js app detected"
   exit 1
 fi
